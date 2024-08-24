@@ -1,0 +1,307 @@
+/* Importing font from Google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Container for background image */
+.background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensure full viewport height */
+    overflow: hidden; /* Hide any overflow */
+    padding-bottom: 3rem; /* Space for footer */
+}
+
+/* Background image styling */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the section */
+    z-index: -1; /* Place the image behind any content */
+}
+
+/* Header background color */
+.header {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Keep gap from left->right & between logo and brand */
+#logo {
+    margin-left: 20px;
+    gap: 10px;
+    font-family: "Roboto", system-ui;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Shift navbar items towards left */
+#navbarNav {
+    position: relative;
+    margin-right: 40px;
+}
+
+/* Keep gap between list items */
+.navbar-nav {
+    gap: 15px;
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav.navbar-list {
+      display: none; /* Hide the navbar list */
+    }
+    .navbar-collapse.collapse.show .navbar-nav.navbar-list {
+        display: block; /* Show the navbar list when expanded */
+    }
+}
+
+@media (max-width: 500px) {
+    #logo img {
+      width: clamp(25px, 5vw, 50px);
+      height: clamp(30px, 5vw, 50px);
+    }
+    #logo {
+        font-size: clamp(13px, 2.5vw, 25px);
+        font-weight: 600;
+    }
+}
+
+/* Hide the navbar toggle button on screens larger than 767px */
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+/* Ensure the nav list is always visible on screens larger than 767px */
+@media (min-width: 768px) {
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: flex-end;
+    }
+}
+
+/* Optionally, you might want to make sure the navbar items are displayed inline */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.nav-item {
+    margin-left: 1rem; /* Adjust spacing as needed */
+}
+
+/* Header */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.875rem;
+    }
+    
+    .navbar-toggler {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        margin-top: 0.5rem;
+    }
+}
+
+
+/* ################################################################################################################ */
+/* Hero Section Styling */
+.hero {
+    background-size: cover; /* Cover the whole section */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center align text */
+    padding: 2rem; /* Padding for spacing */
+    min-height: 60vh; /* Ensure minimum height to take enough space */
+}
+
+.hero-containt {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hero Heading */
+.hero h1 {
+    font-size: 3rem; /* Large font size */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+/* Hero Paragraph */
+.hero p {
+    font-size: 1.25rem; /* Slightly larger text */
+    margin-bottom: 2rem; /* Space below the paragraph */
+}
+
+/* Hero Button */
+.hero .btn {
+    color: #333; /* Dark button text */
+    background-color: #fff; /* White button background */
+    border: none; /* Remove border */
+    padding: 0.75rem 1.5rem; /* Padding inside the button */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Medium font weight */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Slightly smaller font size */
+    }
+
+    .hero p {
+        font-size: 1.125rem; /* Slightly smaller text */
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        padding: 1.5rem; /* Less padding */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller text */
+    }
+
+    .hero .btn {
+        font-size: 0.875rem; /* Smaller font size for the button */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 1rem; /* Even less padding */
+        text-align: center; /* Center align text */
+    }
+
+    .hero h1 {
+        font-size: 1.75rem; /* Smaller font size */
+    }
+
+    .hero p {
+        font-size: 0.875rem; /* Smaller text */
+    }
+
+    .hero .btn {
+        font-size: 0.75rem; /* Smaller font size for the button */
+        padding: 0.5rem 1rem; /* Less padding inside the button */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .hero p {
+        font-size: 0.75rem; /* Smaller text */
+    }
+
+    .hero .btn {
+        font-size: 0.75rem; /* Button font size */
+        padding: 0.5rem 0.75rem; /* Less padding inside the button */
+    }
+}
+
+/* ################################################################################################################ */
+
+/* Footer section styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Light background color */
+    color: #212529; /* Dark text color */
+    padding: 0.5rem 0; /* Padding for a smaller footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-weight: 400;
+    text-align: center; /* Center-align content for smaller screens */
+}
+
+/* Footer content styling */
+footer .container {
+    max-width: 1140px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 0 0.5rem; /* Padding inside the container */
+}
+
+/* Styling for footer headings */
+footer h5 {
+    font-weight: 700; /* Bold text */
+    margin-bottom: 0.25rem; /* Reduced space below headings */
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+.footer-heading, .footer-quote, .footer-bottom-text {
+    text-align: center; /* Center text for a uniform look */
+    margin: 0;
+}
+
+/* Styling for footer bottom */
+.footer-bottom-text {
+    color: #000;
+    font-size: 12px; /* Smaller font size */
+    padding: 0px; /* Reduced padding */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    footer {
+        padding: 0.4rem 0; /* Reduce padding for medium screens */
+    }
+
+    footer h5 {
+        font-size: 0.85rem; /* Slightly smaller font size for headings */
+    }
+
+    .footer-bottom-text {
+        font-size: 11px; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 0.3rem 0; /* Further reduce padding for small screens */
+    }
+
+    footer h5 {
+        font-size: 0.8rem; /* Further reduce font size for headings */
+    }
+
+    .footer-bottom-text {
+        font-size: 10px; /* Further reduce font size for bottom text */
+    }
+}
+
+/* Extra small screens (phones, 320px and up) */
+@media (max-width: 320px) {
+    footer {
+        padding: 0.2rem 0; /* Minimal padding for extra small screens */
+    }
+
+    footer h5 {
+        font-size: 0.75rem; /* Small font size for tiny screens */
+    }
+
+    .footer-bottom-text {
+        font-size: 9px; /* Further reduce font size for bottom text */
+    }
+}
+
+
+
